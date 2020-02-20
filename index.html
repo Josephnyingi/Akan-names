@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Akan Names-The Ghanian Names App</title>
-  <link rel="shortcut icon" href="images/favorite.ico">
-  </head>
-  <body> 
-    <form>
-      <div class= resulted>
-        <p= id = result >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="sec2" id="about">
+        <div class="custom-file">
+            <div class="container h100">
+                <h2>Holla, fill your born days details to see your Akan name!</h2>
+            <form  class="was-validated" onsubmit="return false">
+                <div class="form-group">
+                  <label for="day">Birthday:</label>
+                  <input type="number" class="form-control" id="day" placeholder="Enter day of birth" min="1" max="31" onchange="outPut" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group">
+                  <label for="month">Month:</label>
+                  <input type="number" class="form-control" id="month" placeholder="Enter month of birth" min="1" max="31"  onchange="outPut" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group">
+                  <label for="year">Year:</label>
+                  <input type="number" class="form-control" id="year" placeholder="Enter year of birth" min="1900" max="2020"  onchange="outPut" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="checked">
+                  <label class="form-check-label" for="gender">
+                    <input type="radio" id="gender" name="gender" value="female" checked>male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="gender">
+                    <input type="radio" id="gender" name="gender" value="male" checked>female
+                  </label>
+                </div>
+                <div class="alert alert-success alert-dismissible">
+                    <button type="submit" class="btn" onclick="output()">Submit</button>
+                    <button type="reset" name="submit" class="btn-outline-danger btn-lg">reset</button>
+                <div id="outcome">output</div>
+            </div>
+            </form>
+            </div>
+        </div>
+      </section>
+      
+      
+</body>
+</html>
 
-        </p>
-          
-
-      </div>
 
 
 
-    </form>
-    <hi class="akan-heading">Akan <span class="heading-name">Names</span></hi>
-    <input type = "number" id = "year" placeholder="year" required;>
-    <input type = "number" id = "month" placeholder= "month" required;>
-    <input type = "number" id = "day" placeholder="dayOfTheWeek" required;>
-
-
-    female<input type = "radio" value = "female" id = "female" name= "gender">
-    male<input type= "radio" value = "male" id = "male" name = "gender">
-    <input type = "gender" id = "checkbox">
-    <input type = "submit" value = "submit" onclick="getAkanName()">
-
-    <script src="js/index.js"></script>
-  </body>
-  
-</html>+6
